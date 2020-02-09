@@ -13,3 +13,4 @@ class Addition:
             result = Addition.sum(result, value)
 
         return result
+
