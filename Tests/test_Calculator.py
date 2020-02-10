@@ -36,20 +36,20 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(2, self.calculator.Result)
 
     def test_calculator_return_fraction(self):
-        result = self.calculator.Fraction(3, 6)
-        self.assertEqual(2, result)
+        result = self.calculator.Fraction(6, 2)
+        self.assertEqual(3, result)
 
     def test_calculator_access_fraction_result(self):
-        self.calculator.Product(3, 6)
-        self.assertEqual(2, self.calculator.Result)
+        self.calculator.Fraction(6, 2)
+        self.assertEqual(3, self.calculator.Result)
 
     def test_calculator_return_root(self):
-        result = self.calculator.Root(3, 6)
-        self.assertEqual(2, result)
+        result = self.calculator.Root(16, 2)
+        self.assertEqual(4, result)
 
     def test_calculator_access_root_result(self):
-        self.calculator.Root(3, 6)
-        self.assertEqual(2, self.calculator.Result)
+        self.calculator.Root(16, 2)
+        self.assertEqual(4, self.calculator.Result)
 
     def test_calculator_return_power(self):
         result = self.calculator.Exponentiation(2, 2)
