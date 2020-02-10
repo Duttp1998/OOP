@@ -30,7 +30,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(8.54400374531753, Root.root(8, 3))
 
     def test_MathOperations_logarithm(self):
-        self.assertEqual(2, Logarithm.logarithm(3, 6))
+        self.assertEqual(6, Logarithm.logarithm(64, 2))
 
     def test_MathOperations_sum_list(self):
         valuelist = [1, 2, 3]
