@@ -4,5 +4,5 @@ import math
 class Logarithm:
 
     @staticmethod
-    def logarithm(base,antilogarithm):
-        return math.log(antilogarithm,[base])
+    def logarithm(antilogarithm, base):
+        return math.log(antilogarithm,base)
