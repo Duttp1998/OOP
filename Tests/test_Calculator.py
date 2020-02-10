@@ -59,13 +59,17 @@ class MyTestCase(unittest.TestCase):
         self.calculator.Power(2, 2)
         self.assertEqual(4, self.calculator.Result)
 
-    def test_calculator_return_logarithm(self):
+    def test_calculator_return_Logarithm(self):
         result = self.calculator.Logarithm(64, 2)
-        self.assertEqual(6, result)
+        self.assertEqual(6, self.calculator.Result)
 
     def test_calculator_access_result(self):
         self.calculator.Logarithm(64, 2)
         self.assertEqual(6, self.calculator.Result)
+
+
+
+
 
     def test_multiple_calculators(self):
         calculator1 = Calculator()
