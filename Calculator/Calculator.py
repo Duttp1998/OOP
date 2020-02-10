@@ -37,6 +37,6 @@ class Calculator:
         self.Result = Root.root(a, b)
         return self.Result
 
-    def logarithm(self, a, b):
+    def Logarithm(self, a, b):
         self.Result = Logarithm.logarithm(a, b)
         return self.Result
