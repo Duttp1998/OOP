@@ -27,7 +27,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(4, Exponentiation.power(2, 2))
 
     def test_MathOperations_root(self):
-        self.assertEqual(4, Root.root(16, 2))
+        self.assertEqual(2, Root.root(3, 8))
 
     def test_MathOperations_logarithm(self):
         self.assertEqual(2, Logarithm.logarithm(3, 6))
