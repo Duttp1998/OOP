@@ -1,5 +1,8 @@
+import math
+
+
 class Root:
 
     @staticmethod
     def root(radicand ,degree):
-        return (radicand ** (0.5/degree))
+        return math.sqrt(radicand ** 2 + degree ** 2)
