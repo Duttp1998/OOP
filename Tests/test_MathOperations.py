@@ -1,80 +1,41 @@
 import unittest
 
-from Calculator.Calculator import Calculator
+from MathOperations.addition import Addition
+from MathOperations.subtraction import Subtraction
+from MathOperations.multiplication import Multiplication
+from MathOperations.division import Division
+from MathOperations.exponentiation import Exponentiation
+from MathOperations.root import Root
+from MathOperations.logarithm import Logarithm
 
 
 class MyTestCase(unittest.TestCase):
 
-    def setUp(self):
-        self.calculator = Calculator()
+    def test_MathOperations_Addition(self):
+        self.assertEqual(3, Addition.sum(1, 2))
 
-    def test_instantiate_calculator(self):
-        self.assertIsInstance(self.calculator, Calculator)
+    def test_MathOperations_subtraction(self):
+        self.assertEqual(-1, Subtraction.difference(1, 2))
 
-    def test_calculator_return_sum(self):
-        result = self.calculator.Sum(1, 2)
-        self.assertEqual(3, result)
+    def test_MathOperations_multiplication(self):
+        self.assertEqual(2, Multiplication.product(1, 2))
 
-    def test_calculator_access_sum_result(self):
-        self.calculator.Sum(1, 2)
-        self.assertEqual(3, self.calculator.Result)
+    def test_MathOperations_division(self):
+        self.assertEqual(2, Division.fraction(4, 2))
 
-    def test_calculator_return_difference(self):
-        result = self.calculator.Difference(1, 2)
-        self.assertEqual(-1, result)
+    def test_MathOperations_exponentiation(self):
+        self.assertEqual(4, Exponentiation.power(2, 2))
 
-    def test_calculator_access_difference_result(self):
-        self.calculator.Difference(1, 2)
-        self.assertEqual(-1, self.calculator.Result)
+    def test_MathOperations_root(self):
+        self.assertEqual(8.54400374531753, Root.root(8, 3))
 
-    def test_calculator_return_product(self):
-        result = self.calculator.Product(1, 2)
-        self.assertEqual(2, result)
+    def test_MathOperations_logarithm(self):
+        self.assertEqual(2, Logarithm.logarithm(3, 6))
 
-    def test_calculator_access_product_result(self):
-        self.calculator.Product(1, 2)
-        self.assertEqual(2, self.calculator.Result)
+    def test_MathOperations_sum_list(self):
+        valuelist = [1, 2, 3]
+        self.assertEqual(6, Addition.sum(valuelist))
 
-    def test_calculator_return_fraction(self):
-        result = self.calculator.Fraction(6, 2)
-        self.assertEqual(3, result)
-
-    def test_calculator_access_fraction_result(self):
-        self.calculator.Fraction(6, 2)
-        self.assertEqual(3, self.calculator.Result)
-
-    def test_calculator_return_root(self):
-        result = self.calculator.Root(8, 3)
-        self.assertEqual(8.54400374531753, result)
-
-    def test_calculator_access_root_result(self):
-        self.calculator.Root(3, 8)
-        self.assertEqual(2, self.calculator.Result)
-
-    def test_calculator_return_power(self):
-        result = self.calculator.Exponentiation(2, 2)
-        self.assertEqual(4, result)
-
-    def test_calculator_access_power_result(self):
-        self.calculator.Power(2, 2)
-        self.assertEqual(4, self.calculator.Result)
-
-    def test_calculator_return_logarithm(self):
-        result = self.calculator.Logarithm(64, 2)
-        self.assertEqual(6, result)
-
-    def test_calculator_access_logarithm_result(self):
-        self.calculator.Logarithm(64, 2)
-        self.assertEqual(6, self.calculator.Result)
-
-
-
-
-    def test_multiple_calculators(self):
-        calculator1 = Calculator()
-        calculator2 = Calculator()
-        self.calculator.Sum(calculator1.Sum(1, 2), calculator2.Difference(3, 4))
-        self.assertEqual(2, self.calculator.Result)
 
 
 if __name__ == '__main__':
