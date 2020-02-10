@@ -52,7 +52,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(8.54400374531753, self.calculator.Result)
 
     def test_calculator_return_power(self):
-        result = self.calculator.Exponentiation(2, 2)
+        result = self.calculator.Power(2, 2)
         self.assertEqual(4, result)
 
     def test_calculator_access_power_result(self):
