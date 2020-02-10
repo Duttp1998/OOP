@@ -45,7 +45,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_calculator_return_root(self):
         result = self.calculator.Root(8, 3)
-        self.assertEqual(2, result)
+        self.assertEqual(8.54400374531753, result)
 
     def test_calculator_access_root_result(self):
         self.calculator.Root(3, 8)
