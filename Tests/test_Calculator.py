@@ -49,7 +49,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_calculator_access_root_result(self):
         self.calculator.Root(3, 8)
-        self.assertEqual(2, self.calculator.Result)
+        self.assertEqual(8.54400374531753, self.calculator.Result)
 
     def test_calculator_return_power(self):
         result = self.calculator.Exponentiation(2, 2)
